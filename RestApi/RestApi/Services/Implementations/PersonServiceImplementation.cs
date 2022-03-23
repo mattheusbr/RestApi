@@ -9,7 +9,7 @@ namespace RestApi.Services.Implementations
             return person;
         }
 
-        public void Delete(Person person)
+        public void Delete(long id)
         {
             
         }
@@ -35,12 +35,12 @@ namespace RestApi.Services.Implementations
 
         private Person MockPerson()
         {
-            var id = new Random().NextInt64();
+            var id = new Random().NextInt64(100);
             return new Person()
             {
                 Id = id,
-                FirstName = "Mock FirtName" + id,
-                LastName = "Mock LastName" + id,
+                FirstName = "Mock FirtName " + id,
+                LastName = "Mock LastName " + id,
                 Address = "Mock Address " + id,
                 Gender = "Mock Gender"
             };

@@ -6,7 +6,7 @@ namespace RestApi.Services
     {
         Person Create(Person person);
         Person Update(Person person);
-        void Delete(Person person);
+        void Delete(long id);
         Person FindById(long id);
         List<Person> FindAll();
 

@@ -6,17 +6,17 @@ namespace RestApi.Controllers
     [Route("[controller]")]
     public class CalculadoraController : ControllerBase
     {
-        private static readonly string[] Summaries = new[]
-        {
-        "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-         };
-
         private readonly ILogger<CalculadoraController> _logger;
 
         public CalculadoraController(ILogger<CalculadoraController> logger)
         {
             _logger = logger;
         }
+
+        private static readonly string[] Summaries = new[]
+        {
+            "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
+        };
 
         [HttpGet(Name = "GetWeatherForecast")]
         public IEnumerable<WeatherForecast> Get()

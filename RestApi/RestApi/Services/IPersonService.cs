@@ -1,6 +1,6 @@
 ﻿using RestApi.Model;
 
-namespace RestApi.Services.Implementations
+namespace RestApi.Services
 {
     public interface IPersonService
     {
